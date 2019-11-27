@@ -28,13 +28,6 @@ int main(__attribute__((unused))int gc, char **argv, char **env)
 			free(buff);
 			continue;
 		}
-		if (c == EOF)
-		{
-			free(paths);
-			free_list(head);
-			write(STDOUT_FILENO, "exit\n", 5);
-			exit(EXIT_FAILURE);
-		}
 		argv = _tokenizar(buff, del);
 		argv[0] = _concatenar(&head, argv[0]);
 		child = fork();
