@@ -1,10 +1,15 @@
 #include "holberton.h"
-
-char * _concatenar(list_t **head, char * comand)
+/**
+ * _concatenar - concatenates the command from user with paths
+ * @head: double pointer to list
+ * @comand: input command from user
+ * Return: a concatenate new path
+ */
+char *_concatenar(list_t **head, char *comand)
 {
 	char *newpath, *comandslash;
 	list_t *temporal;
-	
+
 	temporal = *head;
 
 	if (comand != NULL)
@@ -14,11 +19,12 @@ char * _concatenar(list_t **head, char * comand)
 			while ((temporal)->next)
 			{
 				comandslash = string_nconcat("/", comand, strlen(comand));
-				newpath = string_nconcat((temporal)->str, comandslash, strlen(comandslash));
+				newpath = string_nconcat((temporal)->str, comandslash,
+							 strlen(comandslash));
 				if (!access(newpath, X_OK))
 				{
 					free(comandslash);
-					return(newpath);
+					return (newpath);
 				}
 				free(newpath);
 				free(comandslash);
@@ -27,5 +33,5 @@ char * _concatenar(list_t **head, char * comand)
 		}
 		newpath = strdup(comand);
 	}
-	return(newpath);
+	return (newpath);
 }
