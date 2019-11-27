@@ -22,7 +22,7 @@ int main(__attribute__((unused))int gc, char **argv, char **env)
 	build_list(paths, &head);
 	while (1)
 	{
-		buff = _read_line(&c);
+		buff = _read_line(&c, paths, head);
 		if (c == 1)
 		{
 			free(buff);
