@@ -11,7 +11,6 @@ char *_read_line(ssize_t *c, char **paths, list_t *head)
 	size_t buffsize = 0;
 	if ((isatty(STDIN_FILENO) == 1))
 		write(STDOUT_FILENO, "MiShellaDa $: ", 15);
-	/* read = calloc(size * sizeof(char), sizeof(char)); */
 	*c = getline(&read, &buffsize, stdin);
 	if (*c == EOF)
 	{
