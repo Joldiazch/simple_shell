@@ -15,7 +15,8 @@ int main(__attribute__((unused))int gc, char **argv, char **env)
 	list_t *head;
 	ssize_t c = 0;
 
-	argv = head = NULL;
+	argv = NULL;
+	head = NULL;
 	search_paths = _getenv("PATH", env);
 	paths = _tokenizar(search_paths, ":");
 	build_list(paths, &head);
