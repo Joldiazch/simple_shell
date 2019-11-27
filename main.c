@@ -49,9 +49,10 @@ int main(int gc, char **argv, char **env)
 		else
 		{
 			wait(&status);
-			free(argv[0]);
+			/*free(argv[0]);
 			free(buff);
-			free(argv);
+			free(argv);*/
+			freeLoop(argv[0], buff, argv);
 		}
 	}
 	return (0);

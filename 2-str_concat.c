@@ -1,6 +1,5 @@
 #include "holberton.h"
 #include <stdlib.h>
-
 /**
  * *str_concat - creates an array of chars.
  * @s1: pointer to string
