@@ -19,7 +19,7 @@ char *_read_line(ssize_t *c, char **paths, list_t *head)
 		free_list(head);
 		if ((isatty(STDIN_FILENO) == 1))
 			write(STDOUT_FILENO,"\n",1);
-		exit(EXIT_FAILURE);
+		exit(0);
 	}
 	return (read);
 }

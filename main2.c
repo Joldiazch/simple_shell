@@ -14,7 +14,7 @@ int main(__attribute__((unused))int gc, char **argv, char **env)
 	int status;
 	list_t *head;
 	ssize_t c = 0;
-
+	
 	argv = NULL;
 	head = NULL;
 	search_paths = _getenv("PATH", env);
@@ -29,6 +29,7 @@ int main(__attribute__((unused))int gc, char **argv, char **env)
 			continue;
 		}
 		argv = _tokenizar(buff, del);
+		_in_command(argv, env, buff, head);
 		argv[0] = _concatenar(&head, argv[0]);
 		child = fork();
 		if (child == -1)
@@ -37,7 +38,7 @@ int main(__attribute__((unused))int gc, char **argv, char **env)
 		{
 			if (argv[0] && (execve(argv[0], argv, NULL) == -1))
 				perror("Mishellada");
-			exit(EXIT_FAILURE);
+			exit(1);
 		}
 		else
 			wait(&status);
