@@ -20,6 +20,7 @@ int main(__attribute__((unused))int gc, char **argv, char **env)
 	search_paths = _getenv("PATH", env);
 	paths = _tokenizar(search_paths, ":");
 	build_list(paths, &head);
+	free(search_paths);
 	while (1)
 	{
 		buff = _read_line(&c, paths, head);
