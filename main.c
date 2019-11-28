@@ -24,13 +24,6 @@ int main(__attribute__((unused))int gc, char **argv, char **env)
 	while (1)
 	{
 		buff = _read_line(&c, paths, head);
-
-		if (c == 1)
-		{
-			free(buff);
-			continue;
-		}
-
 		argv = _tokenizar(buff, del);
 		_in_command(argv, env, buff, head);
 		argv[0] = _concatenar(&head, argv[0]);

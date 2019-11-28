@@ -16,11 +16,11 @@ char *_concatenar(list_t **head, char *comand)
 	{
 		if (*comand != '/')
 		{
-			while ((temporal)->next)
+			while (temporal)
 			{
-				comandslash = string_nconcat("/", comand, strlen(comand));
+				comandslash = string_nconcat("/", comand, _strlen(comand));
 				newpath = string_nconcat((temporal)->str, comandslash,
-							 strlen(comandslash));
+							 _strlen(comandslash));
 				if (!access(newpath, X_OK))
 				{
 					free(comandslash);
