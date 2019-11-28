@@ -10,6 +10,6 @@
 void freeLoop(char *argv, char *buff, char **arrgv)
 {
 	free(argv);
-	free(buff);
 	free(arrgv);
+	free(buff);
 }

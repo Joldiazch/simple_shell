@@ -14,7 +14,7 @@ char **_tokenizar(char *line, char *DEL)
 
 	if (!tokens)
 	{
-		fprintf(stderr, "lsh: allocation error\n");
+		perror("allocation error\n");
 		exit(1);
 	}
 
@@ -30,7 +30,7 @@ char **_tokenizar(char *line, char *DEL)
 			tokens = _realloc(tokens, bufsize, bufsize * sizeof(char *));
 			if (!tokens)
 			{
-				fprintf(stderr, "lsh: allocation error\n");
+				perror("allocation error\n");
 				exit(1);
 			}
 		}
@@ -38,6 +38,5 @@ char **_tokenizar(char *line, char *DEL)
 		token = strtok(NULL, DEL);
 	}
 	tokens[position] = NULL;
-
 	return (tokens);
 }

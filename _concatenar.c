@@ -32,7 +32,7 @@ char *_concatenar(list_t **head, char *comand)
 			}
 		}
 
-		newpath = _strdup(comand);
 	}
+	newpath = _strdup(comand);
 	return (newpath);
 }
