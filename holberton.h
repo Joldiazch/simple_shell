@@ -39,4 +39,5 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 int _strcmp(char *s1, char *s2);
 void _in_command(char **av, char **env, char *read, list_t *head);
 int _strlen(char *s);
+char *_strdup(char *str);
 #endif /* HOLBERTON_H */

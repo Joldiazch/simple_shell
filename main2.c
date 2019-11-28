@@ -14,7 +14,7 @@ int main(__attribute__((unused))int gc, char **argv, char **env)
 	int status;
 	list_t *head;
 	ssize_t c = 0;
-	
+
 	argv = NULL;
 	head = NULL;
 	search_paths = _getenv("PATH", env);

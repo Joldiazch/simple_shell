@@ -14,12 +14,12 @@ char *_getenv(char *pathname, char **env)
 
 	while (env[x])
 	{
-		k = strdup(env[x]);
+		k = _strdup(env[x]);
 		token = strtok(k, "=");
 		if (_strcmp(token, pathname) == 0)
 		{
 			token = strtok(NULL, "=");
-			t = strdup(token);
+			t = _strdup(token);
 			free(k);
 			return (t);
 		}
