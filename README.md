@@ -6,7 +6,7 @@ A simple UNIX command line interpreter that reads and executes commands from the
 
 Simple Shell was built and tested in the Ubuntu 14.04 LTS via Vagrant in VirtualBox and compiled with GCC version 4.8.4
 
-## Respository Content
+## Repository Content
 - _build_list - Construct the list
 
 - _concatenar - concatenates the command from user with paths
