@@ -7,7 +7,7 @@
 * Description: singly linked list node structure
 * for Holberton project
 */
-list_t *add_node(list_t **head, const char *str)
+list_t *add_node(list_t **head, char *str)
 {
 	list_t *headTemp;
 	unsigned int len = 0;
