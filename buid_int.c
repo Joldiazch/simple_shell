@@ -1,4 +1,12 @@
 #include "holberton.h"
+/**
+ * _in_command - read input command
+ * @av: argument vector
+ * @env: enviroment
+ * @read: read an argument
+ * @head: pointer to list
+ * Return: nothing
+ */
 
 void _in_command(char **av, char **env, char *read, list_t *head)
 {
