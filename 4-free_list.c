@@ -1,4 +1,4 @@
-#include "lists.h"
+#include "holberton.h"
 /**
  * free_list - function that adds a new node at the end of a list_t list..
  * @head: pointer to pointer to head of lements.
