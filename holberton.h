@@ -28,11 +28,16 @@ list_t *add_node(list_t **head, const char *str);
 list_t *add_node_end(list_t **head, const char *str);
 void free_list(list_t *head);
 char **_tokenizar(char *line, char *DEL);
-char *_read_line(ssize_t *c);
-char *_getenv(const char *pathname, char **env);
+char *_read_line(ssize_t *c, char **paths, list_t *head);
+char *_getenv(char *pathname, char **env);
 void build_list(char **paths, list_t **head);
 char *str_concat(char *s1, char *s2);
 char *_concatenar(list_t **head, char *comand);
 char *string_nconcat(char *s1, char *s2, unsigned int n);
 void freeLoop(char *argv, char *buff, char **arrgv);
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
+int _strcmp(char *s1, char *s2);
+void _in_command(char **av, char **env, char *read, list_t *head);
+int _strlen(char *s);
+char *_strdup(char *str);
 #endif /* HOLBERTON_H */

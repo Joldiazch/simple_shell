@@ -31,7 +31,8 @@ char *_concatenar(list_t **head, char *comand)
 				temporal = (temporal)->next;
 			}
 		}
-		newpath = strdup(comand);
+
+		newpath = _strdup(comand);
 	}
 	return (newpath);
 }

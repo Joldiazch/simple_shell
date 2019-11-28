@@ -3,6 +3,7 @@
 void _in_command(char **av, char **env, char *read, list_t *head)
 {
 	unsigned int i = 0;
+
 	if (av[0] != NULL)
 	{
 		if ((_strcmp(av[0], "env")) == 0)

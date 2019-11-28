@@ -14,5 +14,4 @@ void build_list(char **paths, list_t **head)
 		add_node(head, paths[i]);
 		i++;
 	}
-	free(paths);
 }

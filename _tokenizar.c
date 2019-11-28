@@ -27,7 +27,7 @@ char **_tokenizar(char *line, char *DEL)
 		if (position >= bufsize)
 		{
 			bufsize += BUFSIZE;
-			tokens = realloc(tokens, bufsize * sizeof(char *));
+			tokens = _realloc(tokens, bufsize, bufsize * sizeof(char *));
 			if (!tokens)
 			{
 				fprintf(stderr, "lsh: allocation error\n");
